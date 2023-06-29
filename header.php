@@ -10,14 +10,12 @@
 	<meta name="author" content="https://youtube.com/FollowAndrew">
 	<link rel="shortcut icon" href="images/logo.png">
 
-	<?php
-	wp_head();
-	?>
+	<?php wp_head(); ?>
 </head>
 
 <body>
 	<header class="header text-center">
-		<a class="site-title pt-lg-4 mb-0" href="index.html">SiteName.dev</a>
+		<a class="site-title pt-lg-4 mb-0" href="index.html">HowToCreateCustomTheme</a>
 
 		<nav class="navbar navbar-expand-lg navbar-dark">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +23,7 @@
 			</button>
 
 			<div id="navigation" class="collapse navbar-collapse flex-column">
-				<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo">
+				<img class="mb-3 mx-auto logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo">
 
 				<ul class="navbar-nav flex-column text-sm-center text-md-left">
 					<li class="nav-item active">
@@ -58,5 +56,7 @@
 
 	<div class="main-wrapper">
 		<header class="page-title theme-bg-light text-center gradient py-5">
-			<h1 class="heading">Blog Home Page Heading</h1>
+			<h1 class="heading">
+				<?php the_title(); ?>
+			</h1>
 		</header>
